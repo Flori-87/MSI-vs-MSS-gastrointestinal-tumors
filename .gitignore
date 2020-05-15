@@ -3,3 +3,4 @@ __pycache__
 biopsy_images
 *.csv
 *.pkl
+notebooks
