@@ -1,5 +1,9 @@
+import numpy as np
+import pandas as pd
 import cv2
 import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.metrics import classification_report, confusion_matrix
 
 def generator(data,target,bs,rootImg,mode='train'):
     #función generadora para proporcionar datos a las CNN poco a poco
@@ -49,7 +53,7 @@ def conf_matrix(y_test, y_pred):
     # Visualiamos la matriz de confusión
     cm_df = pd.DataFrame(cm)  
     plt.figure(figsize = (7,5))  
-    sn.heatmap(cm_df, annot=True, annot_kws={"size": 12}, fmt="d", xticklabels =["MSI","MSS"], yticklabels=["MSI","MSS"]) # font size  
+    sns.heatmap(cm_df, annot=True, annot_kws={"size": 12}, fmt="d", xticklabels =["MSI","MSS"], yticklabels=["MSI","MSS"])   
     plt.yticks(rotation=0) 
     plt.show() 
     

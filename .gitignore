@@ -1,6 +1,9 @@
 .ipynb_checkpoints
 __pycache__
-biopsy_images
 *.csv
 *.pkl
-notebooks
+src/controllers/upload_biopsy
+Checkpoint*
+model*.json
+.env
+static/img/
