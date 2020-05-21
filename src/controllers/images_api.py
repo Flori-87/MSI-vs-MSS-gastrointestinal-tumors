@@ -19,34 +19,11 @@ def askFile():
 @app.route('/diagnosis', methods=['GET', 'POST'])
 def upload_file():
     if request.method == 'POST':
-        # obtenemos el archivo del input "archivo"
         file = request.files['myFile']
         filename = secure_filename(file.filename)
-        # Guardamos el archivo en el directorio "Archivos PDF"
         file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-        # Retornamos una respuesta satisfactoria con la predicción
         imagen = load_reshape_image(os.path.join(app.config['UPLOAD_FOLDER'], filename))
         prediccion = predictNewImage(loadModel(),imagen)
         return render_template('result.html', prediccion=prediccion)
-    """
-    if request.method == 'POST':
-        # check if the post request has the file part
-        if 'file' not in request.files:
-            flash('No file part')
-            return redirect(request.url)
-        file = request.files['myFile']
-        print(file)
-        # if user does not select file, browser also
-        # submit an empty part without filename
-        if file.filename == '':
-            flash('No selected file')
-            return redirect(request.url)
-        if file:
-            filename = secure_filename(file.filename)
-            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-        model = loadModel()
-        imagen = load_reshape_image(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-        prediccion = predictNewImage(model,imagen)
-        return prediccion
-        """
+
 

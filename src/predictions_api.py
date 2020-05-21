@@ -16,10 +16,10 @@ def load_reshape_image(path):
 
 def loadModel():
     #cargar el modelo
-    with open('src/model_CNN_prueba.json','r') as f:
+    with open('src/model_CNN_definitivo.json','r') as f:
         model_json = json.load(f)
     loaded_model = model_from_json(model_json)
-    loaded_model.load_weights("src/Checkpoint_02_0.63")
+    loaded_model.load_weights("src/Checkpoint_CNN_02_0.61")
     #print("Loaded model from disk")
     return loaded_model
 
