@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MSI GI tumor diagnosis</title>
+    <link href="{{ url_for('static', filename='estilo.css') }}" rel="stylesheet" type="text/css">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='img/icono.png') }}">
+</head>
+
+<body>
+	
+    <h1><b>Diagnosis of MSI gastrointestinal tumors</b></h1>
+	</br>
+    <h3><br></br>Diagnosis:<br>
+    </br>{{ prediccion }}
+    </h3>
+    <h4>
+        <p>
+            <br><b>Gastrointestinal tumors</b> can be classified into microsatellite instable <b>(MSI)</b> or microsatellite stable <b>(MSS)</b> tumors.
+            Microsatellite instability is a DNA predisposition to mutation. In contrast to MSS tumors, MSI gastrointestinal tumor patients are likely to respond to <b>immunotherapy</b>.
+			Using a convolutional neural network, this app classifies gastrointestinal tumors in MSI tumor or MSS tumors from the analysis of images of biopsies staining with hematoxylin and eosin.<br />
+            
+        </p>
+    </h4>
+    
+    <address><br />Created on May 2020 by Florinda Meléndez</address>
+
+</body>
+</html>
