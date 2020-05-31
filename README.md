@@ -25,7 +25,7 @@ Therefore, original images were used to perform the trainings.
 Different classifier models from Scikit-Learn library were tested: K-Nearest Neighbors, Decision Trees, Support Vector Machines, with Decision Trees class obtaining the best metrics. Moreover, three neural network topologies with different number of layers were used. 
 Finally, the neural network with best metrics was used to train the whole dataset. To perform the complete training, an instance in Google Cloud Platform was used.
 
-#### -API development
+#### - API development
 
 Finally, an API in Flask was created. The objective was to receive a new biosy image from HTML request and return the tumor diagnosis and the recommnedation for immunotherapy treatment based on the prediction made by the trained neural network. 
 Although the purpose of this application is to support the Health System, it is still in development, therefore **it must not be used to diagnose tumors**. 
