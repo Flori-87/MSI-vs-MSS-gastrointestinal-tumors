@@ -22,5 +22,9 @@ Therefore, original images were used to perform the trainings.
 
 #### - Model trainings
 
-Different classifier models from Scikit-Learn library were tested: K-Nearest Neighbors, Decision Trees, Support Vector Machines, with Decision Trees class obtaining the best metrics.
-Three neural network topologies were used. 
+Different classifier models from Scikit-Learn library were tested: K-Nearest Neighbors, Decision Trees, Support Vector Machines, with Decision Trees class obtaining the best metrics. Moreover, three neural network topologies with different number of layers were used. 
+Finally, the neural network with best metrics was used to train the whole dataset. To perform the complete training, an instance in Google Cloud Platform was used.
+
+#### -API development
+
+
