@@ -15,12 +15,12 @@ A [dataset](https://www.kaggle.com/joangibert/tcga_coad_msi_mss_jpg) containing 
 Image preprocessing was carried out using OpenCV and Skimage libraries, as well as Numpy and Pandas to manage data from images.
 Scikit-Learn, H2O and Keras libraries were used to train models and neural networks and make the predictions on new images.
 
-    #### Image preprocessing
+#### - Image preprocessing
 
-    As mentioned above, different preprocessing methods were performed to reduce the dimensionality of images. However, all these techniques not only decrease image dimensions, but also cause the images to lose information. Reducing dimensionality at the cost of losing information may not be a good idea in images where the differences are subtle. In fact, good metrics were not obtained with the tested models and neural network when images were preprocessed. 
-    Therefore, original images were used to perform the trainings.
+As mentioned above, different preprocessing methods were performed to reduce the dimensionality of images. However, all these techniques not only decrease image dimensions, but also cause the images to lose information. Reducing dimensionality at the cost of losing information may not be a good idea in images where the differences are subtle. In fact, good metrics were not obtained with the tested models and neural network when images were preprocessed. 
+Therefore, original images were used to perform the trainings.
 
-    #### Model trainings
+#### - Model trainings
 
-    Different classifier models from Scikit-Learn library were tested: K-Nearest Neighbors, Decision Trees, Support Vector Machines, with Decision Trees class obtaining the best metrics.
-    Three neural network topologies were used. 
+Different classifier models from Scikit-Learn library were tested: K-Nearest Neighbors, Decision Trees, Support Vector Machines, with Decision Trees class obtaining the best metrics.
+Three neural network topologies were used. 
